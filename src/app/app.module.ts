@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { PeopleService } from './services/people.service';
+
 import { AppComponent } from './app.component';
+import { RoutingModule } from './routes/routes.component';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RoutingModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
